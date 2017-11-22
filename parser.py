@@ -11,7 +11,7 @@ def send_mail(content):
     from email.mime.multipart import MIMEMultipart
 
     gmailUser = os.environ['sender']
-    gmailPassword = = os.environ['sender_pwd']
+    gmailPassword = os.environ['sender_pwd']
     recipient = os.environ['recipient']
 
     msg = MIMEMultipart('alternative')
