@@ -1,0 +1,15 @@
+[Unit]
+Description=Parse weather.
+After=multi-user.target
+
+[Service]
+Environment="PATH=/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin"
+Environment=sender=SENDER_MAIL
+Environment=sender_pwd=SENDER_PWD
+Environment=recipient=RECEIVER_MAIL
+WorkingDirectory=/home/USER_NAME/
+User=USER_NAME
+ExecStart=/usr/bin/python3 /home/USER_NAME/FILE_NAME
+
+[Install]
+WantedBy = multi-user.target
